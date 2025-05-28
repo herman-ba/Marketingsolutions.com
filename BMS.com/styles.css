@@ -194,14 +194,14 @@
             margin: 0 auto;
             width: 100%;
             position: relative;
-            padding: 0 1rem; /* Reduced from 2rem to 1rem */
+            padding: 0 2rem;
         }
         
         .nav-left {
             display: flex;
             align-items: center;
             gap: 0.25rem;
-            margin-left: -4rem; /* Increased negative margin from -2rem to -4rem */
+            margin-left: 0;
             position: static;
             left: unset;
             top: unset;
@@ -210,11 +210,12 @@
         
         .nav-center {
             position: absolute;
-            left: calc(50% - 2vw); /* Shift 2vw to the left from center */
+            left: 50%;
             transform: translateX(-50%);
             display: flex;
             justify-content: center;
             align-items: center;
+            white-space: nowrap;
             width: auto;
             z-index: 1;
         }
@@ -223,7 +224,7 @@
             display: flex;
             align-items: center;
             gap: 2rem;
-            margin-right: -4rem; /* Increased negative margin to match nav-left */
+            margin-right: 0;
         }
         
         .dropdown-collection {
@@ -231,6 +232,7 @@
             gap: 2rem;
             align-items: center;
             justify-content: center;
+            flex-wrap: nowrap;
         }
         
         .dropdown-collection a {
@@ -239,6 +241,7 @@
             font-size: 1rem;
             font-weight: 400;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
         
         .dropdown-collection a:hover {
@@ -342,11 +345,11 @@
             }
             
             .nav-left {
-                margin-left: 16px;
+                margin-left: 1rem;
             }
-            
+
             .nav-right {
-                margin-right: -2rem; /* Less negative margin on smaller screens */
+                margin-right: 1rem;
             }
         }
         
@@ -369,11 +372,11 @@
             }
             
             .nav-left {
-                margin-left: 8px;
+                margin-left: 0.5rem;
             }
-            
+
             .nav-right {
-                margin-right: -1rem; /* Even less negative margin on mobile */
+                margin-right: 0.5rem;
             }
         }
         
@@ -402,7 +405,7 @@
             transform: translate(100vw, -50%);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             position: absolute;
-            right: -4rem; /* Added negative margin to match nav-left */
+            right: 0;
             top: 50%;
             padding: 0;
             margin: 0;
